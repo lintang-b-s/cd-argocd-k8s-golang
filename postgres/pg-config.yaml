@@ -66,6 +66,6 @@ spec:
       postInitApplicationSQL:
         - create schema my_app
 
-  storage:
-    size: 10Gi
-    storageClass: nfs-client #local-storage
+  # storage:
+  #   size: 10Gi
+  #   storageClass: nfs-client #local-storage
