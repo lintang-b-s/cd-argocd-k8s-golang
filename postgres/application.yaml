@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://cloudnative-pg.io/charts/
     targetRevision: 0.20.1
-    chart: cnpg
+    chart:  cnpg/cloudnative-pg
     helm:
       version: v3
       releaseName: pg-operator
