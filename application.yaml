@@ -12,6 +12,7 @@ spec:
     path: postgres
   destination:
     server: https://kubernetes.default.svc
+    namespace: postgres
   syncPolicy:
     automated:
       prune: true

@@ -68,4 +68,4 @@ spec:
 
   storage:
     size: 10Gi
-    storageClass: local-storage
+    storageClass: nfs-client #local-storage
