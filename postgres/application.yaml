@@ -10,15 +10,11 @@ spec:
   project: default
   source:
     repoURL: https://cloudnative-pg.io/charts/
-    targetRevision: 0.20.1
     chart:  cnpg/cloudnative-pg
     helm:
       version: v3
       releaseName: pg-operator
       passCredentials: false
-      parameters:
-        - name: "image.tag"
-          value: 1.22.1
   destination:
     server: https://kubernetes.default.svc
     namespace: chat
