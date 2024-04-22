@@ -8,9 +8,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  https://cloudnative-pg.io/charts
+    repoURL: https://cloudnative-pg.github.io/charts
     targetRevision: 0.20.2
-    chart:  cloudnative-pg/cloudnative-pg
+    chart: cnpg/cloudnative-pg
     helm:
       releaseName: pg-operator
       passCredentials: false
