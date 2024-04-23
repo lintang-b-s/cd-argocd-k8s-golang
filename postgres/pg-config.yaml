@@ -38,24 +38,24 @@ spec:
 
   logLevel: debug
 
-  # postgresql:
-  #   parameters:
-  #     max_connections: '200'
-  #     shared_buffers: '256MB'
-  #     effective_cache_size: '768MB'
-  #     maintenance_work_mem: '64MB'
-  #     checkpoint_completion_target: '0.9'
-  #     wal_buffers: '7864kB'
-  #     default_statistics_target: '100'
-  #     random_page_cost: '1.1'
-  #     effective_io_concurrency: '200'
-  #     work_mem: '655kB'
-  #     huge_pages: 'off'
-  #     min_wal_size: '1GB'
-  #     max_wal_size: '4GB'
+  postgresql:
+    parameters:
+      max_connections: '200'
+      shared_buffers: '256MB'
+      effective_cache_size: '768MB'
+      maintenance_work_mem: '64MB'
+      checkpoint_completion_target: '0.9'
+      wal_buffers: '7864kB'
+      default_statistics_target: '100'
+      random_page_cost: '1.1'
+      effective_io_concurrency: '200'
+      work_mem: '655kB'
+      huge_pages: 'off'
+      min_wal_size: '1GB'
+      max_wal_size: '4GB'
 
-  #   pg_hba:
-  #   - host all all 0.0.0.0/0 scram-sha-256
+    pg_hba:
+    - host all all 0.0.0.0/0 scram-sha-256
 
   # bootstrap:
   #   initdb:
@@ -68,3 +68,4 @@ spec:
 
   storage:
     size: 10Gi
+    storageClass: local-storage
