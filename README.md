@@ -1,5 +1,5 @@
 # coba-cd-argocd-k8s
-continous delivery golang api (https://github.com/lintang-b-s/chat-be),postgres, redis ke kubernetes cluster pake argocd.
+continous delivery golang api (https://github.com/lintang-b-s/chat-be), postgres, redis ke kubernetes cluster pake argocd.
 
 ### create pg cluster
 1. add cnpg operator
