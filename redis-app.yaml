@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: redis-app
+  name: redis
   namespace: argocd
 spec:
   project: default
@@ -10,23 +10,27 @@ spec:
     repoURL: https://charts.bitnami.com/bitnami
     targetRevision: 19.1.2
     chart: redis
-    values: |
-      sentinel:
-        enabled: true
-      volumePermissions:
-        enabled: true
-      replica:
-        replicaCount: 3
-        persistence:
-          size: 5Gi
-      auth:
-        enabled: true
-        password: lintang
-      master:
-        livenessProbe:
+    helm:
+      version: v3
+      releaseName: redis
+      passCredentials: false
+      values: |
+        sentinel:
           enabled: true
-        persistence:
-          size: 5Gi
+        volumePermissions:
+          enabled: true
+        replica:
+          replicaCount: 3
+          persistence:
+            size: 5Gi
+        auth:
+          enabled: true
+          password: lintang
+        master:
+          livenessProbe:
+            enabled: true
+          persistence:
+            size: 5Gi
       
   destination:
     server: https://kubernetes.default.svc
