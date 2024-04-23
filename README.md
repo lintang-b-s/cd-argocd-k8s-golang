@@ -72,3 +72,8 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 
 #### my golang chat api
 ![chat api](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867608/Screenshot_from_2024-04-23_17-18-40_wlzvkx.png)
+
+
+## TODO 
+1. bikin jenkins CI (buat push image baru ke dockerhub & ganti versi image di deployment file golang-chat), di repo golang-chatny
+2. tambahin service mesh linkerd?
