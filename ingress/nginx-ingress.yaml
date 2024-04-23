@@ -4,21 +4,24 @@ kind: Ingress
 metadata:
   name: web-server-ingress
   namespace: chat
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - host: ""
     http:
       paths:
-      - pathType: Prefix
-        path: /nginx
+      - path: /nginx(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name:  nginx-project
             port:
               number: 80
-      - pathType: Prefix
-        path: /chat 
+      - path: /chat(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: go-chat
