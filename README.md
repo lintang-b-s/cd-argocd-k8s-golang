@@ -24,3 +24,31 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 - GRANT ALL ON SCHEMA public to usercoba;
 - ALTER DATABASE chat OWNER  TO usercoba;
 ```
+
+
+### redis helm values config
+````
+ values: |
+      #  sentinel:
+       #   enabled: true
+       #   persistence:
+       #     storageClass: local-storage
+        volumePermissions:
+          enabled: true
+      # replica:
+        ##  replicaCount: 3
+        #  persistence:
+        #    size: 5Gi
+        #    storageClass: local-storage
+        auth:
+          enabled: true
+          password: lintang
+        master:
+          livenessProbe:
+            enabled: true
+          persistence:
+            size: 5Gi
+            storageClass: local-storage
+        global:
+          storageClass: local-storage
+```
