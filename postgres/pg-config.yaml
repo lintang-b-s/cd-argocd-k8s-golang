@@ -3,7 +3,7 @@ kind: Secret
 type: kubernetes.io/basic-auth
 data:
   password: cGFzcwo= #pass
-  username: cG9zdGdyZXM= #postgres - Note: It NEEDs to be postgres
+  username: cG9zdGdyZXMK #postgres - Note: It NEEDs to be postgres
 metadata:
   name: pg-superuser
   namespace: pg
