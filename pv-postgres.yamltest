@@ -10,7 +10,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: local-storage
   local:
-    path: /data/volumes/pv1
+    path: /home/lintangbs/data-k8s
   nodeAffinity:
     required:
       nodeSelectorTerms:
