@@ -1,4 +1,5 @@
 # coba-cd-argocd-k8s
+continous delivery golang api (https://github.com/lintang-b-s/chat-be),postgres, redis ke kubernetes cluster pake argocd.
 
 ### create pg cluster
 1. add cnpg operator
@@ -10,7 +11,7 @@ helm install my-cloudnative-pg cloudnative-pg/cloudnative-pg --version 0.20.2
 2. add private repo di node argocd anda
 https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 
-3. install application.yaml di argocd node
+3. install semua *-app.yaml di argocd node
 
 
 ### create user in pg pod
@@ -25,9 +26,14 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 - ALTER DATABASE chat OWNER  TO usercoba;
 ```
 
+### Teknologi
+1. kubernetes
+2. cloudnative pg (https://cloudnative-pg.io/)
+3. redis bitnami helm chart (https://artifacthub.io/packages/helm/bitnami/redis)
+4. golang
 
 ### redis helm values config
-````
+```
  values: |
       #  sentinel:
        #   enabled: true
@@ -52,3 +58,17 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
         global:
           storageClass: local-storage
 ```
+
+### Hasil
+#### argocd
+
+![list argocd app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867776/Screenshot_from_2024-04-23_16-29-54_xlkmd5.png)
+
+![argocd chat app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867602/chat_mmq1cd.png)
+
+![postgres app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867602/postgres_kircv2.png)
+
+![redis app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867602/redis_mkvs9v.png)
+
+#### my golang chat api
+![chat api](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867608/Screenshot_from_2024-04-23_17-18-40_wlzvkx.png)
