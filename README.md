@@ -72,7 +72,14 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 #### my golang chat api
 ![chat api](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867608/Screenshot_from_2024-04-23_17-18-40_wlzvkx.png)
 
+### k8s dashboard
+![chat](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713873447/dashboard-chat_ovosgz.png)
+![redis](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713873421/dashboard-redisss_n0l7lr.png)
+![pg](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713873421/dashboard-pg_dyejqg.png)
+
 
 ## TODO 
 1. bikin jenkins CI (buat push image baru ke dockerhub & ganti versi image di deployment file golang-chat), di repo golang-chatny
 2. tambahin service mesh linkerd?
+3. scale postgres jd 1 master & 2 slave (  butuh 3 node)
+4. scale redis jd 1 master & 2 slave & 3 sentinel (tapi butuh 3 node)
