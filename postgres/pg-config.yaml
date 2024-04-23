@@ -57,14 +57,14 @@ spec:
     pg_hba:
     - host all all 0.0.0.0/0 scram-sha-256
 
-  # bootstrap:
-  #   initdb:
-  #     database: my_app_db
-  #     owner: app_user
-  #     secret:
-  #       name: pg-app-user
-  #     postInitApplicationSQL:
-  #       - create schema my_app
+  bootstrap:
+    initdb:
+      database: my_app_db
+      owner: app_user
+      secret:
+        name: pg-app-user
+      postInitApplicationSQL:
+        - create schema my_app
 
   storage:
     size: 10Gi
