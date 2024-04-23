@@ -62,7 +62,6 @@ https://argo-cd.readthedocs.io/en/stable/user-guide/private-repositories/
 ### Hasil
 #### argocd
 
-![list argocd app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867776/Screenshot_from_2024-04-23_16-29-54_xlkmd5.png)
 
 ![argocd chat app](https://res.cloudinary.com/tutorial-lntng/image/upload/v1713867602/chat_mmq1cd.png)
 
