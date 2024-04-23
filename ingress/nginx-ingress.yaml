@@ -5,19 +5,20 @@ metadata:
   name: web-server-ingress
   namespace: chat
 spec:
+  ingressClassName: nginx
   rules:
   - host: ""
     http:
       paths:
-      - path: /nginx
-        pathType: Prefix
+      - pathType: Prefix
+        path: /nginx
         backend:
           service:
             name:  nginx-project
             port:
               number: 80
-      - path: /chat 
-        pathType: Prefix
+      - pathType: Prefix
+        path: /chat 
         backend:
           service:
             name: go-chat
