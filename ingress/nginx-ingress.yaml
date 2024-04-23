@@ -6,7 +6,7 @@ metadata:
   namespace: chat
 spec:
   rules:
-  - host: "*"
+  - host: ""
     http:
       paths:
       - path: /nginx
